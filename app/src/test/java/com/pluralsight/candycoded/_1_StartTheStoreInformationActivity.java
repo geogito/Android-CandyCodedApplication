@@ -24,7 +24,6 @@ import static org.junit.Assert.assertTrue;
 @RunWith(PowerMockRunner.class)
 public class _1_StartTheStoreInformationActivity {
     private static MainActivity activity;
-
     private static boolean onOptionsItemSelected_result = true;
     private static boolean called_Intent = false;
     private static boolean called_Intent_correctly = false;
@@ -93,6 +92,10 @@ public class _1_StartTheStoreInformationActivity {
         override_mainactivity_onoptionitemselected();
         assertFalse("onOptionsItemSelected() does not return call to super.", onOptionsItemSelected_result);
     }
+   // @Override
+    
+
+
 
     @Test
     public void create_intent_infoactivity() throws Exception {

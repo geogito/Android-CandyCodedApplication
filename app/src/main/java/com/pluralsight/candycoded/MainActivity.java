@@ -79,7 +79,15 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main, menu);
         return true;
     }
-    // ***
+
+    @Override
+    protected boolean onPrepareOptionsPanel(View view, Menu menu) {
+        return super.onPrepareOptionsPanel(view, menu);
+        Intent infointent = new Intent (this,InfoActivity.class);
+       infointent.addCategory(String,menu);
+       startActivity(infointent);
+    }
+// ***
     // TODO - Task 1 - Show Store Information Activity
     // ***
 

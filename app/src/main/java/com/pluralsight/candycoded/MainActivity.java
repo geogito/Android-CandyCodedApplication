@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -79,17 +80,17 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main, menu);
         return true;
     }
-
-    @Override
-    protected boolean onPrepareOptionsPanel(View view, Menu menu) {
-        return super.onPrepareOptionsPanel(view, menu);
-        Intent infointent = new Intent (this,InfoActivity.class);
-       infointent.addCategory(String,menu);
-       startActivity(infointent);
-    }
-// ***
+    // ***
     // TODO - Task 1 - Show Store Information Activity
     // ***
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent infointen = new Intent(this,InfoActivity.class );
+        startActivity(infointen);
+        return super.onOptionsItemSelected(item);
+    }
 
     private void addCandiesToDatabase(Candy[] candies) {
         SQLiteDatabase db = candyDbHelper.getWritableDatabase();

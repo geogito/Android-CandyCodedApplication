@@ -92,7 +92,7 @@ public class _1_StartTheStoreInformationActivity {
         override_mainactivity_onoptionitemselected();
         assertFalse("onOptionsItemSelected() does not return call to super.", onOptionsItemSelected_result);
     }
-   // @Override
+
     
 
 
